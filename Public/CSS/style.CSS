@@ -1,0 +1,223 @@
+/* Global entities */
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+a:visited{
+    color: inherit;
+}
+a{
+    text-decoration: none
+}
+:root{
+    --color800:#00838f;
+    --color700:#0097a7;
+    --color600:#00acc1;
+    --color500:#00bcd4;
+    --color400:#26c6da;
+    --color300:#4dd0e1;
+    --color200:#80deea;
+    --color100:#b2ebf2;
+    --color50:#e0f7fa;
+}
+/* Start Header  */
+
+.logo{
+    font-size: xx-large;
+    font-weight: bold;
+
+}
+header div nav{
+    position: relative;
+}
+header div nav ul{
+    list-style: none;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+header div nav ul li{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    overflow: hidden;
+
+}
+header div nav ul li::before{
+    content:"";
+    width: 100%;
+    height: 2px;
+    background-color: var(--color800);
+    position: absolute;
+    left:-100%;
+    top:0;
+    transition-duration: 0.5s;
+
+}
+header div nav ul li:hover::before{
+    left:0;
+}
+header div nav ul li a{
+    font-weight: bold;
+    color: black;
+}
+
+/* Landing Section */
+.landing {
+    position: relative;
+}
+.landing .cover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgb(0, 0, 0,60%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.landing .carousel .carousel-item{
+    position: 
+    relative;
+    height: 20%;
+}
+.landing .carousel .carousel-item img{
+    width: 100%;
+    height:500px;
+}
+.landing .carousel .carousel-item .blog-data{
+    position: absolute;
+    z-index: 5;
+    left:50%;
+    top:50%;
+    color: white;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.landing a:visited{
+        color: white;
+}
+.landing .carousel .carousel-item .blog-data h2 {
+    font-size: 50px;
+}
+.landing .carousel .carousel-item .blog-data h2 {
+    font-size: 50px;
+}
+.landing .carousel .carousel-item .blog-data p 
+{
+    font-size: 30px;
+}
+/* Landing Section */
+/* Blogs Section */
+.blogs h1 {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.blogs h1::before{
+    content: "";
+    width: 20.5%;
+    height: 3px;
+    left:-100%;
+    right: 100%;
+    background-color: var(--color800);
+    position: absolute;
+    transition-duration: 0.8s;
+} 
+.blogs h1:hover::before {
+    left: 30%;
+}
+.blogs h1 span {
+    padding: 5px;
+    transition-duration: 0.8s;
+}
+.blogs h1:hover span
+{
+    color:var(--color800);
+}
+.blogs h1::after {
+    content: "";
+    width: 20.5%;
+    height: 3px;
+    right:-100%;
+    left: 100%;
+    background-color: var(--color800);
+    position: absolute;
+    transition-duration: 0.8s;
+}
+.blogs h1:hover::after{
+    left: 50%;
+}
+
+.blogs .blog{
+    height:200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+    position: relative;
+    overflow: hidden;
+    transition-duration: 0.8s;
+}
+.blogs .blog::before{
+    content: "";
+    width: 4px;
+    height: 20%;
+    background-color: var(--color800);
+    position: absolute;
+    top: 0;
+    left:0;
+    transition-duration: 0.4s;
+}
+.blogs .blog:hover::before
+{
+    top:-20%;
+}
+.blogs .blog:hover {
+    background: linear-gradient(145deg,var(--color50),var(--color500),var(--color800));
+    box-shadow: 6px 6px 29px #bebebe,
+    -6px -6px 29px #ffffff;
+    color: white;
+}
+/* Blogs Section */
+/* Footer */
+footer{
+    background-color: #00000F;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.social
+{
+    display: flex;
+    font-size: 30px;
+    width: 10%;
+    justify-content: space-between;
+    align-items: center;
+}
+.social a{
+    transition-duration: 0.4s;
+}
+.social a:hover{
+    color:var(--color500)
+}
+/* new blog form */
+.new-blog
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* new blog form */
+/* details */
+.blogs  .content{
+    font-weight: lighter;
+    font-size: 28px;
+}
+/* details */

@@ -1,0 +1,66 @@
+<%-include("../Views/Partials/bigHeightHead.ejs")%>
+<body>
+    <%-include("../Views/Partials/header.ejs")%>
+    <!-- Start Landing -->
+    <div class="landing">
+        <div class="cover"></div>
+    <div  id="carouselExampleAutoplaying" class="slider carousel slide" data-bs-ride="carousel" >
+    <div class="carousel-inner">
+        <% var newBlog = []; %>
+        <% for (var i = 0; i < 3; i++) { %>
+        <%  newBlog.push(blog[i] ?? { id:"/" , title: "Default Title", snippet: "Default snippet" }); %>
+        <% } %>
+        <div class="carousel-item active">
+        <img src="Assets/Slide1.jpg" class="d-block img-fluid" alt="Slide1">
+        <div class="blog-data">
+            <h2><a href=<%=newBlog[0].id??"/"%>><%=newBlog[0].title??"No Blogs"%></a></h2>
+            <p><%=newBlog[0].snippet??"No Blogs"%></p>
+        </div>
+        </div>
+
+        <div class="carousel-item">
+        <img src="Assets/Slide2.jpg" class="d-block img-fluid " alt="Slide2">
+        <div class="blog-data">
+            <h2><a href=<%=newBlog[1].id??"/"%>><%=newBlog[1].title??"No Blogs"%></a></h2>
+            <p><%=newBlog[1].snippet??"No Blogs"%></p>
+        </div>
+        </div>
+
+        <div class="carousel-item">
+        <img src="Assets/Slide3.jpg" class="d-block img-fluid " alt="Slide3">
+        <div class="blog-data">
+            <h2><a href=<%=newBlog[2].id%>><%=newBlog[2].title%></a></h2>
+            <p><%=newBlog[2].snippet%></p>
+        </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+    </div>
+    </div>
+    <!-- End Landing -->
+    <!-- Start Blog -->
+    <div class="blogs container row ms-auto me-auto">
+        <h1 class="mt-4"><span>Read Our Amazing Blogs</span></h1>
+        <% if (blog.length > 0) %>
+        <% {%>
+        <% blog.forEach((item)=>{%>
+            <div class="blog col-4 mt-4 ">
+                <h2><a href=<%=item.id%>><%=item.title%></a></h2>
+                <p><%=item.snippet%></p>
+            </div>
+        <% })%>
+        <% }%>
+    </div>
+    <!-- End Blog -->
+    <%-include("../Views/Partials/footer.ejs")%>
+    <script src="JS/all.min.js"></script>
+    <script src="bootstrap-5.2.2-dist/js/bootstrap.min.js"></script>
+</body>
+</html>

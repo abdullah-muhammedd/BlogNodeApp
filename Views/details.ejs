@@ -1,0 +1,22 @@
+<%-include("../Views/Partials/smallHeighHead.ejs")%>
+
+<body>
+    <%-include("../Views/Partials/header.ejs")%>
+    <!-- Start Landing -->
+    <!-- Start Blog -->
+    <div class="blogs container mt-4">
+        <div>
+            <h2><%=item.title%></h2>
+            <a data-doc=<%=item.id%> class="link-danger h4" id="trash"><i class="fa-solid fa-trash-can"></i></a>
+            <p class="content"><%=item.content%></p>
+        </div>
+    </div>
+
+    <!-- End Blog -->
+    <%-include("../Views/Partials/footer.ejs")%>
+    <script src="JS/all.min.js"></script>
+    <script src="bootstrap-5.2.2-dist/js/bootstrap.min.js"></script>
+    <script src="JS/details.js"></script>
+</body>
+
+</html>

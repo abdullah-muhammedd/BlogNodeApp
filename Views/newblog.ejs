@@ -1,0 +1,18 @@
+<%-include("../Views/Partials/bigHeightHead.ejs")%>
+    <body>
+        <%-include("../Views/Partials/header.ejs")%>
+        <!-- New blog form -->
+        <h2 class="container">Create a new blog</h2>
+        <form class="new-blog mt-4 mb-4" action="/newblog" method="post">
+            <input class="text-field input-group-text mt-3 mb-3" type="text" placeholder="title" name="title">
+            <input class="text-field input-group-text mt-3 mb-3" type="text" placeholder="Snippet" name="snippet">
+            <textarea class="text-area input-group-text text-start mt-3 mb-3" placeholder="Blog content" cols="100" rows="20" style="resize:none" name="content"></textarea>
+            <input type="submit" value="Post" class="btn btn-primary submit">
+        </form>
+        <!-- New blog form -->
+        <%-include("../Views/Partials/footer.ejs")%>
+        <script src="JS/all.min.js"></script>
+        <script src="bootstrap-5.2.2-dist/js/bootstrap.min.js"></script>
+    </body>
+
+</html>
